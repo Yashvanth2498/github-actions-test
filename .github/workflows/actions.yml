@@ -1,0 +1,16 @@
+name: Actions workflow
+
+on: [push]
+
+jobs: 
+  run-github-actions:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Simple JS Actions
+        id: greet
+        uses: Yashvanth2498/hello-world-javascript-action@master #Instead of master we can use versions or commit id
+        # Using master or branch is not preferred. Commit id is preferred.
+        with: 
+          who-to-greet: John
+      - name: Log greeting time
+        run: echo"${{ steps.greet.outputs.time}}"   

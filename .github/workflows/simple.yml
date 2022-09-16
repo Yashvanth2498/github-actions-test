@@ -20,6 +20,7 @@ jobs:
         shell: python      
   run-windows-commands:
     runs-on: windows-latest
+# needs:['run-shell-command']-> this command will execute first shell job and then it continue with windows.(Jobs will not runs parallel)
     steps:
       - name: Directory Powershell
         run: Get-Location  
