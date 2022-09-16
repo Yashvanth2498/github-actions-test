@@ -6,6 +6,11 @@ jobs:
   run-github-actions:
     runs-on: ubuntu-latest
     steps:
+
+      - name: List Files
+        run: |
+          pwd
+          ls
       - name: Simple JS Actions
         id: greet
         uses: Yashvanth2498/hello-world-javascript-action@22921edcd03f458f756d959e06e47685e117db1f #Instead of master we can use versions or commit id
