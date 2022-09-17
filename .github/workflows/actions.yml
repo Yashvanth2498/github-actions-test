@@ -1,8 +1,12 @@
 name: Actions workflow
 
 on: #[push]
-  schedule:
-    - cron: "0/15 * * * *" 
+  #schedule:
+    #- cron: "0/15 * * * *" 
+  push:
+    branches:
+      - master
+      
 
 jobs: 
   run-github-actions:
